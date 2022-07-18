@@ -1,0 +1,171 @@
+// GLOBAL
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.wrapper {
+  padding: 0 auto;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+// HEADER
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  z-index: 100;
+
+  &-background {
+    position: relative;
+    height: 800px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/zorza_1920.jpeg");
+  }
+
+  &-logo {
+    font-size: 3rem;
+
+    &:hover {
+      color: rgb(24, 198, 79);
+    }
+  }
+
+  &-logo span {
+    color: rgb(24, 198, 79);
+  }
+}
+
+.header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar a {
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.header .navbar a:hover {
+  border-bottom: 0.1rem solid rgb(24, 198, 79);
+}
+
+.header .icons div {
+  font-size: 2.2rem;
+  margin-left: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header .icons div:hover {
+  color: rgb(24, 198, 79);
+}
+
+#menu-btn {
+  display: none;
+}
+
+.header .search-form {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 115%;
+  right: 7%;
+  width: 50rem;
+  height: 5rem;
+  background-color: #fff;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+.header .search-form.active {
+  transform: scaleY(1);
+}
+
+.header .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 1rem;
+  text-transform: none;
+  border: none;
+}
+
+.header .search-form label {
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color: #000;
+  cursor: pointer;
+}
+
+.header .search-form label:hover {
+  color: rgb(24, 198, 79);
+}
+
+// MEDIA
+@media (max-width: 767px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .header .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+
+  #menu-btn {
+    display: inline;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    right: -200%;
+    background-color: #fff;
+    width: 30rem;
+    height: calc(100vh - 5rem);
+    transition: right 0.8s;
+  }
+
+  .header .navbar.active {
+    right: 0;
+  }
+
+  .header .navbar a {
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color: #000;
+  }
+}
+
+@media (max-width: 940px) {
+}
