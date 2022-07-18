@@ -179,7 +179,72 @@ body {
   color: rgb(24, 198, 79);
 }
 
+// ABOUT US
+.about-us {
+  margin: 7rem 0;
+  text-align: center;
+}
+
+.heading {
+  font-size: 4rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 100;
+}
+
+.line {
+  margin: 2rem auto;
+  width: 2.5rem;
+  height: 0.2rem;
+  background-color: rgb(24, 198, 79);
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: rgba(136, 136, 136, 0.891);
+}
+
+
+
+
+
+
+
+
+
+
 // MEDIA
+@media (max-width: 450px) {
+  #menu-btn {
+    display: inline;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    right: -200%;
+    background-color: #fff;
+    width: 100%;
+    height: calc(100vh - 5rem);
+    transition: right 0.8s;
+    z-index: 200;
+  }
+
+  .header .navbar.active {
+    right: 0;
+  }
+
+  .header .navbar a {
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #000;
+  }
+}
+
 @media (max-width: 767px) {
   html {
     font-size: 55%;
@@ -192,32 +257,6 @@ body {
   .header .search-form {
     width: 90%;
     right: 2rem;
-  }
-
-  #menu-btn {
-    display: inline;
-  }
-
-  .header .navbar {
-    position: absolute;
-    top: 100%;
-    right: -200%;
-    background-color: #fff;
-    width: 30rem;
-    height: calc(100vh - 5rem);
-    transition: right 0.8s;
-  }
-
-  .header .navbar.active {
-    right: 0;
-  }
-
-  .header .navbar a {
-    display: block;
-    margin: 1.5rem;
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    color: #000;
   }
 }
 
