@@ -23,6 +23,16 @@ body {
   max-width: 1200px;
 }
 
+.header.sticky {
+  background-color: #fff;
+  border-bottom: 1px solid #000;
+}
+
+.header.sticky a,
+.header.sticky .icons div {
+  color: #000;
+}
+
 // HEADER
 .header {
   position: fixed;
@@ -319,6 +329,14 @@ body {
 
   .col-2 .btn {
     margin: 4rem 7rem;
+  }
+
+  .work-img {
+    order: 1;
+  }
+
+  .reverse {
+    order: 2;
   }
 }
 
