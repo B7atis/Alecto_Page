@@ -1,4 +1,4 @@
-// GLOBAL
+// RESET
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +16,7 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+// GLOBAL
 .wrapper {
   padding: 0 auto;
   margin: 0 auto;
@@ -25,12 +26,23 @@ body {
 
 .header.sticky {
   background-color: #fff;
-  border-bottom: 1px solid #000;
+  border-bottom: 0.1rem solid rgba(136, 136, 136, 0.278);
 }
 
 .header.sticky a,
 .header.sticky .icons div {
   color: #000;
+}
+
+.header.sticky .header-logo:hover {
+  color: rgb(24, 198, 79);
+}
+
+.navigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 // HEADER
@@ -39,9 +51,6 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 1rem 2rem;
   z-index: 1000;
 
@@ -155,10 +164,11 @@ body {
   position: absolute;
   display: flex;
   align-items: center;
-  top: 115%;
-  right: 2rem;
+  top: 140%;
+  right: 0.3rem;
   width: 50rem;
   height: 5rem;
+  border: 0.1rem solid rgba(136, 136, 136, 0.278);
   background-color: #fff;
   transform: scaleY(0);
   transform-origin: top;
@@ -385,7 +395,8 @@ body {
 
   .header .search-form {
     width: 90%;
-    right: 2rem;
+    right: 0.2rem;
+    top: 150%;
   }
 }
 
