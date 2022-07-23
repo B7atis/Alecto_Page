@@ -1,3 +1,5 @@
+@use "./utilities/colors" as *;
+
 // RESET
 * {
   margin: 0;
@@ -24,20 +26,6 @@ body {
   max-width: 1200px;
 }
 
-.header.sticky {
-  background-color: #fff;
-  border-bottom: 0.1rem solid rgba(136, 136, 136, 0.278);
-}
-
-.header.sticky a,
-.header.sticky .icons div {
-  color: #000;
-}
-
-.header.sticky .header-logo:hover {
-  color: rgb(24, 198, 79);
-}
-
 .navigation {
   position: relative;
   display: flex;
@@ -52,7 +40,7 @@ body {
   left: 0;
   right: 0;
   padding: 1rem 2rem;
-  z-index: 1000;
+  z-index: 5000;
 
   &-background {
     position: relative;
@@ -68,7 +56,7 @@ body {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: $header-shadow;
       content: "";
     }
   }
@@ -78,12 +66,12 @@ body {
     font-family: "Jost", sans-serif;
 
     &:hover {
-      color: rgb(24, 198, 79);
+      color: $main-green;
     }
   }
 
   &-logo span {
-    color: rgb(24, 198, 79);
+    color: $main-green;
   }
 
   &-text {
@@ -93,7 +81,7 @@ body {
     transform: translate(-50%, -50%);
     font-family: "Work Sans", sans-serif;
     text-align: center;
-    color: #fff;
+    color: $white;
   }
 
   &-text span {
@@ -115,22 +103,22 @@ body {
   &-btn {
     margin: 1.5rem 0;
     padding: 1rem 4rem;
-    border: 1px solid #fff;
+    border: 1px solid $white;
     border-radius: 2rem;
     background-color: transparent;
-    color: #fff;
+    color: $white;
     transition: border 0.5s, color 0.5s;
     cursor: pointer;
   }
 
   &-btn:hover {
-    border: 1px solid rgb(24, 198, 79);
-    color: rgb(24, 198, 79);
+    border: 1px solid $main-green;
+    color: $main-green;
   }
 }
 
 .header a {
-  color: #fff;
+  color: $white;
   text-decoration: none;
 }
 
@@ -142,18 +130,18 @@ body {
 }
 
 .header .navbar a:hover {
-  border-bottom: 0.1rem solid rgb(24, 198, 79);
+  border-bottom: 0.1rem solid $main-green;
 }
 
 .header .icons div {
   font-size: 2.2rem;
   margin-left: 2rem;
-  color: #fff;
+  color: $white;
   cursor: pointer;
 }
 
 .header .icons div:hover {
-  color: rgb(24, 198, 79);
+  color: $main-green;
 }
 
 #menu-btn {
@@ -168,8 +156,8 @@ body {
   right: 0.3rem;
   width: 50rem;
   height: 5rem;
-  border: 0.1rem solid rgba(136, 136, 136, 0.278);
-  background-color: #fff;
+  border: 0.1rem solid $main-border;
+  background-color: $white;
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.5s;
@@ -191,12 +179,26 @@ body {
 .header .search-form label {
   font-size: 2.2rem;
   margin-right: 1.5rem;
-  color: #000;
+  color: $black;
   cursor: pointer;
 }
 
 .header .search-form label:hover {
-  color: rgb(24, 198, 79);
+  color: $main-green;
+}
+
+.header.sticky {
+  background-color: $white;
+  border-bottom: 0.1rem solid $main-border;
+}
+
+.header.sticky a,
+.header.sticky .icons div {
+  color: $black;
+}
+
+.header.sticky .header-logo:hover {
+  color: $main-green;
 }
 
 // ABOUT US
@@ -215,14 +217,14 @@ body {
   margin: 2rem auto;
   width: 2.5rem;
   height: 0.2rem;
-  background-color: rgb(24, 198, 79);
+  background-color: $main-green;
 }
 
 .subtitle {
   font-size: 1.4rem;
   font-weight: 300;
   letter-spacing: 0.5px;
-  color: rgba(136, 136, 136, 0.891);
+  color: $light-grey;
 }
 
 .container {
@@ -248,14 +250,14 @@ body {
   height: 100px;
   font-size: 3rem;
   border-radius: 50%;
-  background-color: rgba(228, 227, 227, 0.623);
-  color: rgba(136, 136, 136, 0.891);
+  background-color: $background-grey;
+  color: $light-grey;
   transition: background-color 0.5s, color 0.5s;
   cursor: pointer;
 
   &:hover {
-    background-color: rgb(24, 198, 79);
-    color: #fff;
+    background-color: $main-green;
+    color: $white;
   }
 }
 
@@ -270,7 +272,7 @@ body {
   font-size: 1.3rem;
   font-weight: 300;
   line-height: 2rem;
-  color: rgba(136, 136, 136, 0.891);
+  color: $light-grey;
 }
 
 .btn {
@@ -278,20 +280,38 @@ body {
   padding: 1rem 4rem;
   border-radius: 2rem;
   border: none;
-  background-color: rgb(24, 198, 79);
-  color: #fff;
+  background-color: $main-green;
+  color: $white;
   transition: background-color 0.5s, color 0.5s;
   cursor: pointer;
 
   &:hover {
-    background-color: rgba(228, 227, 227, 0.623);
-    color: rgba(136, 136, 136, 0.891);
+    background-color: $background-grey;
+    color: $light-grey;
   }
 }
 
 // WORK
 .work-container-top {
-  background-color: rgba(228, 227, 227, 0.623);
+  background-color: $background-grey;
+}
+
+.work-container-bottom {
+  position: relative;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/office_1920.jpg");
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $opinion-shadow;
+    content: "";
+  }
 }
 
 .work-row {
@@ -304,11 +324,39 @@ body {
 .col-2 {
   flex-basis: 50%;
   min-width: 30rem;
+  z-index: 1001;
 }
 
 .col-2 img {
   max-width: 100%;
   padding: 5rem 0;
+}
+
+.col-2 h3 span {
+  color: $main-green;
+}
+
+.col-2 h3 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.7rem;
+  font-weight: 300;
+  font-family: Work Sans, sans-serif;
+  letter-spacing: 0.1rem;
+  color: $white;
+}
+
+.col-2 .opinion-coment {
+  margin: 0 0 15rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-family: Work Sans, sans-serif;
+  color: $light-grey;
+
+  &.opinion-coment span {
+    font-weight: 400;
+  }
 }
 
 .text {
@@ -317,12 +365,27 @@ body {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 2.6rem;
-  color: rgba(136, 136, 136, 0.891);
+  color: $light-grey;
 }
 
 .top,
 .bottom {
   margin-left: 2rem;
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 15rem auto 0;
+  width: 100px;
+  height: 100px;
+  border: 2px solid $black;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/face-opinion_1920.jpg");
 }
 
 // MEDIA
@@ -355,11 +418,15 @@ body {
     display: inline;
   }
 
+  .navigation {
+    position: static;
+  }
+
   .header .navbar {
     position: absolute;
     top: 100%;
     right: -200%;
-    background-color: #fff;
+    background-color: $white;
     width: 100%;
     height: calc(100vh - 5rem);
     transition: right 0.8s;
@@ -376,7 +443,7 @@ body {
     padding: 0.5rem;
     text-align: center;
     font-size: 1.5rem;
-    color: #000;
+    color: $black;
   }
 
   .col-2 h2 {
@@ -389,16 +456,28 @@ body {
     font-size: 55%;
   }
 
+  .navigation {
+    position: static;
+  }
+
   .header {
     padding: 1.5rem 2rem;
   }
 
   .header .search-form {
     width: 90%;
-    right: 0.2rem;
-    top: 150%;
+    right: 2rem;
   }
-}
 
-@media (min-width: 940px) {
+  .work-container-bottom {
+    background-image: url("../img/office_640.jpg");
+  }
+
+  .photo {
+    background-image: url("../img/face-opinion_640.jpg");
+  }
+
+  .col-2 .opinion-coment {
+    font-size: 1.5rem;
+  }
 }
