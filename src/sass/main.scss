@@ -202,12 +202,10 @@ body {
 }
 
 // ABOUT US
-.about-us {
-  margin: 7rem auto;
-  text-align: center;
-}
-
 .heading {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0 0 0;
   font-size: 4rem;
   font-family: "Work Sans", sans-serif;
   font-weight: 100;
@@ -221,6 +219,7 @@ body {
 }
 
 .subtitle {
+  text-align: center;
   font-size: 1.4rem;
   font-weight: 300;
   letter-spacing: 0.5px;
@@ -273,6 +272,13 @@ body {
   font-weight: 300;
   line-height: 2rem;
   color: $light-grey;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 6rem;
 }
 
 .btn {
@@ -386,6 +392,61 @@ body {
   background-position: center;
   background-size: cover;
   background-image: url("../img/face-opinion_1920.jpg");
+}
+
+// SERVICES
+.services {
+  background-color: $background-grey;
+}
+
+.services-container .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem 8rem 2rem;
+}
+
+.services-container .row {
+  flex: 1 1 40rem;
+  text-align: left;
+}
+
+.services-container .content h4 {
+  font-family: Work Sans, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 200;
+  margin: 0 0 1rem 0.5rem;
+}
+
+.services-container .content p {
+  margin-left: 0.5rem;
+  line-height: 2.6rem;
+}
+
+.services-container .card {
+  display: flex;
+  flex: 1 1 20rem;
+  justify-content: center;
+}
+
+.services-container .item {
+  margin: 0 1rem 2rem 3rem;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: $white;
+  color: $main-green;
+}
+
+.services-container .item i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
 }
 
 // MEDIA
