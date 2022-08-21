@@ -637,15 +637,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 5rem;
+  // flex-wrap: wrap;
 }
 
 .logo-footer {
   display: flex;
+  margin-top: 5rem;
   align-items: center;
 }
 
 .logo-footer img {
+  margin-left: 0.3rem;
   width: 3rem;
 }
 
@@ -653,6 +655,10 @@ body {
   margin-left: 0.3rem;
   font-size: 1.2rem;
   color: $light-grey;
+}
+
+.link-footer {
+  margin-top: 5rem;
 }
 
 .link-footer a {
@@ -737,6 +743,15 @@ body {
 
   .col-2 h2 {
     padding: 2.2rem 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .link-footer a {
+    padding: 0.8rem;
   }
 }
 
